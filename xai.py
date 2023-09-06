@@ -55,25 +55,19 @@ def toconv(layers):
     newlayers = []
 
     for i,layer in enumerate(layers):
-
         if isinstance(layer,nn.Linear):
-
             newlayer = None
-
             if i == 0:
                 m,n = 512,layer.weight.shape[0]
                 newlayer = nn.Conv2d(m,n,7)
                 newlayer.weight = nn.Parameter(layer.weight.reshape(n,m,7,7))
-
             else:
                 m,n = layer.weight.shape[1],layer.weight.shape[0]
                 newlayer = nn.Conv2d(m,n,1)
                 newlayer.weight = nn.Parameter(layer.weight.reshape(n,m,1,1))
 
             newlayer.bias = nn.Parameter(layer.bias)
-
             newlayers += [newlayer]
-
         else:
             newlayers += [layer]
 
@@ -86,7 +80,6 @@ def explain(model, X, cl, device='cpu', n_classes=2):
     
     layers = list(model._modules['features']) +  toconv([model._modules['avgpool']]) +toconv(list(model._modules['classifier']))
     L = len(layers)
-    
     
     A = [X]+[None]*L
     for l in range(L):
