@@ -1,0 +1,13 @@
+torch==2.0
+torchvision
+tqdm
+numpy
+scipy
+scikit-learn
+scikit-image
+notebook
+click
+matplotlib
+pandas
+tensorboardX
+ipywidgets
