@@ -13,20 +13,27 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <!-- <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="misc/images/tulogo.png" alt="TUBerlin", width="300", height="150">
   </a>
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="misc/images/mpiwglogo_2.png" alt="MPIWG", width="300", height="150">
+  </a>
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="misc/images/bifold.png" alt="BIFOLD", width="300", height="150">
+  </a> -->
 
-  <h3 align="center">Best-README-Template</h3>
 
-  <p align="center">
+  <h3 align="center">Explainability and Transparency in the Realm of Digital Humanities: Toward a Historian XAI</h3>
+
+  <!-- <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-  </p>
+  </p> -->
 </div>
 
 
@@ -34,18 +41,32 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project is a cooperation between the [Sphere Project](https://sphaera.mpiwg-berlin.mpg.de/) at the [Max Planck Institute for the History of Science](https://www.mpiwg-berlin.mpg.de/) and the [Machine Learning Group at TU Berlin](https://web.ml.tu-berlin.de/) within the frame of the [BIFOLD](https://www.bifold.berlin/). The driving force behind this project is our shared belief that AI applications in the humanities should be transparent and explainable. On the one hand, this allows the validation of humanities hypotheses that would otherwise be direclty tied to a model's output; on the other, such approaches open the door towards a more "engaging" and "interrogative" interaction with an AI model in the humanities. 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+### Case Studies 
+To implement such an approach, we relied heavily on the [S-VED dataset](https://doi.org/10.5281/zenodo.7142456), and enriched it with some extra classes to achieve our objective. We proposed three different case studies  - based on this extended dataset - with the aim on generating a 'new' definition of three types of illustration in Early Modern Editions of the [Sphaera Corpus](http://db.sphaera.mpiwg-berlin.mpg.de/), namely, 'Mathematical Instruments', 'Machines', and 'Scientific Illustrations'. These 'new' definitions, derived with XAI methods, help us better hypothesize what were the relevant visual features of each of these classes in the eyes of the early modern printer. The image below shows an example of an LRP heatmap of a mathematical instrument from our method. Regions in red, such as the graduated elements and the base, contribute positively to the classification of a 'mathematical instrument' and play an major role in the definition of what is a mathematical instrument in our dataset. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+![LRP MathInstrument](misc/images/example.png "MathInsturment")
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+### Approach generalization
+While our method is based on the well curated [Sphaera Corpus](http://db.sphaera.mpiwg-berlin.mpg.de/), this approach is easily transferable to other [historical] datasets. To implement this on your own dataset see the [Getting Started](#getting-started) section below
 
-Use the `BLANK_README.md` to get started.
+
+### Paper Abstract
+The recent advancements in the field of Artificial Intelligence (AI) translated to an increased adoption of AI technology in the humanities, which is often challenged by the limited amount of annotated data, as well as its heterogeneity. Despite the scarcity of data it has become common practice to design increasingly complex AI models, usually at the expense of human readability, explainability, and trust. This in turn has led to an increased need for tools to help humanities scholars better explain and validate their models as well as their hypotheses. In this paper, we discuss the importance of employing Explainable AI (XAI) methods within the humanities to gain insights into historical processes as well as ensure model reproducibility and a trustworthy scientific result. To drive our point, we present several representative case studies from the _Sphaera_ project where we analyze a large, well-curated corpus of early modern textbooks using an AI model, and rely on the XAI explanatory outputs to generate historical insights concerning their visual content. More specifically, we show that XAI can be used as a partner when investigating debated subjects in the history of science, such as what strategies were used in the early modern period to showcase mathematical instruments and machines.
+
+
+### Cite
+```
+@article{ElHajjEberle2023,
+author = {Hassan El-Hajj and Oliver Eberle and Anika Merklein and Anna Siebold and Noha Shlomi and Jochen Buettner and Julius Matrinetz and Klaus-Robert Mueller and Grégoire Montavon and Matteo Valleriani},
+title = {Explainability and Transparency in the Realm of Digital Humanities: Towards a Historian XAI},
+year = {2023},
+journal = {Internation Journal of Digital Humanities},
+publisher = {Springer}
+}
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
